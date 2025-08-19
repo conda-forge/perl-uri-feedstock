@@ -11,9 +11,11 @@ Home: https://github.com/libwww-perl/URI
 
 Package license: GPL-1.0-or-later OR Artistic-1.0-Perl
 
-Summary: Uniform Resource Identifiers (absolute and relative)
+Summary: Uniform Resource Identifiers (absolute and relative).
 
 Development: https://github.com/libwww-perl/URI
+
+Documentation: https://metacpan.org/pod/URI
 
 This module implements the URI class. Objects of this class represent "Uniform Resource Identifier references" as specified in RFC 2396 (and updated by RFC 2732).
 
@@ -25,9 +27,11 @@ Home: https://github.com/libwww-perl/URI
 
 Package license: GPL-1.0-or-later OR Artistic-1.0-Perl
 
-Summary: Uniform Resource Identifiers (absolute and relative)
+Summary: Uniform Resource Identifiers (absolute and relative).
 
 Development: https://github.com/libwww-perl/URI
+
+Documentation: https://metacpan.org/pod/URI
 
 This module implements the URI class. Objects of this class represent "Uniform Resource Identifier references" as specified in RFC 2396 (and updated by RFC 2732).
 
@@ -54,6 +58,20 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19480&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/perl-uri-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19480&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/perl-uri-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19480&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/perl-uri-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_" alt="variant">
                 </a>
               </td>
             </tr><tr>
