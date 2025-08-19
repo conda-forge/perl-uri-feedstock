@@ -11,9 +11,11 @@ Home: https://github.com/libwww-perl/URI
 
 Package license: GPL-1.0-or-later OR Artistic-1.0-Perl
 
-Summary: Uniform Resource Identifiers (absolute and relative)
+Summary: Uniform Resource Identifiers (absolute and relative).
 
 Development: https://github.com/libwww-perl/URI
+
+Documentation: https://metacpan.org/pod/URI
 
 This module implements the URI class. Objects of this class represent "Uniform Resource Identifier references" as specified in RFC 2396 (and updated by RFC 2732).
 
@@ -25,9 +27,11 @@ Home: https://github.com/libwww-perl/URI
 
 Package license: GPL-1.0-or-later OR Artistic-1.0-Perl
 
-Summary: Uniform Resource Identifiers (absolute and relative)
+Summary: Uniform Resource Identifiers (absolute and relative).
 
 Development: https://github.com/libwww-perl/URI
+
+Documentation: https://metacpan.org/pod/URI
 
 This module implements the URI class. Objects of this class represent "Uniform Resource Identifier references" as specified in RFC 2396 (and updated by RFC 2732).
 
