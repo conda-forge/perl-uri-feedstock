@@ -1,5 +1,6 @@
 #!/bin/bash
 
+rm -f t/otpauth.t
 export LC_ALL="en_US.UTF-8"
 
 if [[ -f Build.PL ]]; then
