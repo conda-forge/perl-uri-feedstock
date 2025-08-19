@@ -1,6 +1,6 @@
 {% set name = "perl-uri" %}
-{% set version = "5.17" %}
-{% set sha256 = "5f7e42b769cb27499113cfae4b786c37d49e7c7d32dbb469602cd808308568f8" %}
+{% set version = "5.32" %}
+{% set sha256 = "9632067d34e14e0dae2da94631c4f25a387fcc48d06fa29330e8b3c04c4e913d" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
+  skip: True  # [win]
   run_exports:
     weak:
       - {{ name }} ={{ version }}
@@ -34,15 +34,16 @@ test:
     - URI
 
 about:
-  home: https://github.com/libwww-perl/URI
-  summary: 'Uniform Resource Identifiers (absolute and relative)'
+  home: "https://github.com/libwww-perl/URI"
+  summary: "Uniform Resource Identifiers (absolute and relative)."
   description: |
     This module implements the URI class. Objects of this class represent "Uniform Resource Identifier references" as specified in RFC 2396 (and updated by RFC 2732).
   license: GPL-1.0-or-later OR Artistic-1.0-Perl
   license_file:
     - {{ environ["PREFIX"] }}/man/man1/perlartistic.1
     - {{ environ["PREFIX"] }}/man/man1/perlgpl.1
-  dev_url: https://github.com/libwww-perl/URI
+  dev_url: "https://github.com/libwww-perl/URI"
+  doc_url: "https://metacpan.org/pod/URI"
 
 extra:
   recipe-maintainers:
