@@ -3,26 +3,6 @@ About perl-uri-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/perl-uri-feedstock/blob/main/LICENSE.txt)
 
-
-About perl-uri
---------------
-
-Home: https://github.com/libwww-perl/URI
-
-Package license: GPL-1.0-or-later OR Artistic-1.0-Perl
-
-Summary: Uniform Resource Identifiers (absolute and relative).
-
-Development: https://github.com/libwww-perl/URI
-
-Documentation: https://metacpan.org/pod/URI
-
-This module implements the URI class. Objects of this class represent "Uniform Resource Identifier references" as specified in RFC 2396 (and updated by RFC 2732).
-
-
-About perl-uri
---------------
-
 Home: https://github.com/libwww-perl/URI
 
 Package license: GPL-1.0-or-later OR Artistic-1.0-Perl
@@ -41,36 +21,11 @@ Current build status
 
 
 <table><tr>
-    <td>GitHub Actions</td>
+    <td>All platforms:</td>
     <td>
       <a href="https://github.com/conda-forge/perl-uri-feedstock/actions/workflows/conda-build.yml">
         <img src="https://github.com/conda-forge/perl-uri-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
-    </td>
-  </tr>
-    
-  <tr>
-    <td>Azure</td>
-    <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19480&branchName=main">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/perl-uri-feedstock?branchName=main">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>osx_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19480&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/perl-uri-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
     </td>
   </tr>
 </table>
