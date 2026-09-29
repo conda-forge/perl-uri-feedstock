@@ -3,7 +3,7 @@
 {% set sha256 = "5a8750ddd8ee743d7cc89bebdd542a9b78a34023164ebe19dea0c248e121c21e" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: "{{ version }}"
 
 source:
@@ -11,8 +11,15 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: true  # [win]
+  number: 1
+  noarch: generic
+  script:
+    - rm t/otpauth.t  # remove this when perl-mime-base32 is available
+    - >-
+      perl Makefile.PL INSTALLDIRS=vendor NO_PERLLOCAL=1 NO_PACKLIST=1 MAKE=make
+      && make
+      && make test
+      && make install VERBINST=1
   run_exports:
     weak:
       - {{ name }} ={{ version }}
@@ -22,16 +29,83 @@ requirements:
     - make
   host:
     - perl
+    - perl-business-isbn
+#    - perl-mime-base32  # re-enable when available
     - perl-test-needs
     - perl-test-warnings
     - perl-test-fatal
   run:
     - perl
     - perl-business-isbn
+#    - perl-mime-base32  # re-enable when available
 
 test:
   imports:
     - URI
+    - URI::Escape
+    - URI::Heuristic
+    - URI::IRI
+    - URI::QueryParam
+    - URI::Split
+    - URI::URL
+    - URI::WithBase
+    - URI::data
+    - URI::file
+    - URI::file::Base
+    - URI::file::FAT
+    - URI::file::Mac
+    - URI::file::OS2
+    - URI::file::QNX
+    - URI::file::Unix
+    - URI::file::Win32
+    - URI::ftp
+    - URI::ftpes
+    - URI::ftps
+    - URI::geo
+    - URI::gopher
+    - URI::http
+    - URI::https
+    - URI::icap
+    - URI::icaps
+    - URI::irc
+    - URI::ircs
+    - URI::ldap
+    - URI::ldapi
+    - URI::ldaps
+    - URI::mailto
+    - URI::mms
+    - URI::news
+    - URI::nntp
+    - URI::nntps
+#    - URI::otpauth  # re-enable when perl-mime-base32 is available
+    - URI::pop
+    - URI::rlogin
+    - URI::rsync
+    - URI::rtsp
+    - URI::rtspu
+    - URI::scp
+    - URI::sftp
+    - URI::sip
+    - URI::sips
+    - URI::smb
+    - URI::smtp
+    - URI::snews
+    - URI::ssh
+    - URI::telnet
+    - URI::tn3270
+    - URI::urn
+    - URI::urn::isbn
+    - URI::urn::oid
+    - URI::ws
+    - URI::wss
+  commands:
+    - prove
+  source_files:
+    - t
+  requires:
+    - perl-test-needs
+    - perl-test-warnings
+#    - perl-mime-base32  # un-comment when perl-mime-base32 is available
 
 about:
   home: "https://github.com/libwww-perl/URI"
@@ -39,9 +113,7 @@ about:
   description: |
     This module implements the URI class. Objects of this class represent "Uniform Resource Identifier references" as specified in RFC 2396 (and updated by RFC 2732).
   license: GPL-1.0-or-later OR Artistic-1.0-Perl
-  license_file:
-    - {{ environ["PREFIX"] }}/man/man1/perlartistic.1
-    - {{ environ["PREFIX"] }}/man/man1/perlgpl.1
+  license_file: LICENSE
   dev_url: "https://github.com/libwww-perl/URI"
   doc_url: "https://metacpan.org/pod/URI"
 
