@@ -1,6 +1,6 @@
 {% set name = "perl-uri" %}
-{% set version = "5.39" %}
-{% set sha256 = "335b37d2e4c4145297a2d122f343882652615812601e1fd27786b6663b71791d" %}
+{% set version = "5.40" %}
+{% set sha256 = "ef5d2ef099a1a24a6e83ffe543de73337805d3d39c00b84fa205d725ad1a1b63" %}
 
 package:
   name: {{ name }}
