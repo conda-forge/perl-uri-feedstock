@@ -1,6 +1,6 @@
 {% set name = "perl-uri" %}
-{% set version = "5.37" %}
-{% set sha256 = "5a8750ddd8ee743d7cc89bebdd542a9b78a34023164ebe19dea0c248e121c21e" %}
+{% set version = "5.38" %}
+{% set sha256 = "6cd49ac0bba005842458ea17a2f5b58c146f3884b846c91aecf2cec4320dc6bf" %}
 
 package:
   name: {{ name }}
@@ -11,15 +11,12 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   script:
     - rm t/otpauth.t  # remove this when perl-mime-base32 is available
     - >-
-      perl Makefile.PL INSTALLDIRS=vendor NO_PERLLOCAL=1 NO_PACKLIST=1 MAKE=make
-      && make
-      && make test
-      && make install VERBINST=1
+      perl Makefile.PL INSTALLDIRS=vendor NO_PERLLOCAL=1 NO_PACKLIST=1 MAKE=make && make && make test && make install VERBINST=1
   run_exports:
     weak:
       - {{ name }} ={{ version }}
